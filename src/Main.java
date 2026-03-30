@@ -41,45 +41,36 @@ void main() {
     int childAge = 8;
     if (childAge <= 5) {
         System.out.println("Если возраст ребенка равен " + childAge + ", то ему нельзя кататься на аттракционе.");
-    }
-    if (childAge > 5 && childAge <= 14) {
+    } else if (childAge > 5 && childAge <= 14) {
         System.out.println("Если возраст ребенка равен " + childAge + ", то он может кататься только в сопровождении взрослого.");
-    }
-    if (childAge > 14) {
+    } else if (childAge > 14) {
         System.out.println("Если возраст ребенка равен " + childAge + ", то он может кататься без сопровождения взрослого.");
     }
 
     System.out.println("Задача 6");
     int trainCarCapacity = 102;
     int seatingCount = 60;
-    int passengers = 78;
+    int passengers = 102;
 
-    if (passengers >= trainCarCapacity) {
-        System.out.println("В вагоне нет свободных мест.");
+    if (passengers < seatingCount) {
+        System.out.println("В вагоне есть сидячие места.");
+    } else if (passengers >= seatingCount && passengers < trainCarCapacity) {
+        System.out.println("В вагоне осатлись только стоячие места.");
     } else {
-        if (passengers < seatingCount) {
-            System.out.println("В вагоне есть сидячие места.");
-        } else {
-            System.out.println("В вагоне осатлись только стоячие места.");
-        }
+        System.out.println("В вагоне нет свободных мест.");
     }
 
-    System.out.println("Задача 7");
-    int one = 4;
-    int two = 2;
-    int three = 10;
 
-    if (one > two) {
-        if (one > three) {
-            System.out.println("Наибольшее число: " + one);
-        } else {
-            System.out.println("Наибольшее число: " + three);
-        }
+    System.out.println("Задача 7");
+    int one = -1;
+    int two = 2;
+    int three = 5;
+
+    if(one > two && one > three) {
+        System.out.println("Наибольшее число " + one);
+    } else if (two > three) {
+        System.out.println("Наибольшее число " + two);
     } else {
-        if (two > three) {
-            System.out.println("Наибольшее число: " + two);
-        } else {
-            System.out.println("Наибольшее число: " + three);
-        }
+        System.out.println("Наибольшее число " + three);
     }
 }
